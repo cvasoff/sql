@@ -247,22 +247,22 @@ SELECT *
 	
 FROM product AS p
 LEFT JOIN product_category AS pc
-	ON pc.product_category_id = p.product_category_id</sql><sql name="SQL 12*">/* MODULE 2 */
+	ON pc.product_category_id = p.product_category_id</sql><sql name="SQL 12">/* MODULE 2 */
 /* Multiple Table JOINs */
 
 
 /* 1. Using the Query #4 from DISTINCT earlier 
     (Which vendor has sold products to a customer AND which product was it AND to whom was it sold)
 
-    Replace all the IDs (customer, vendor, and product) with the names instead */ 
+    Replace all the IDs (customer, vendor, and product) with the names instead */ 
 	
 SELECT DISTINCT
-cp.vendor_id -- could also be v.vendor_id 
-,vendor_name
---, product_id
-, product_name
---, customer_id
-, customer_first_name
+cp.vendor_id -- could also be v.vendor_id 
+,vendor_name
+--, product_id
+, product_name
+--, customer_id
+, customer_first_name
 , customer_last_name
 
 FROM customer_purchases as cp
