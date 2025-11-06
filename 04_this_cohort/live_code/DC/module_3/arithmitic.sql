@@ -16,3 +16,4 @@ WHERE vendor_id % 2 = 0;
 SELECT * FROM vendor
 WHERE vendor_id % 3 = 0;
 
+-- hello
