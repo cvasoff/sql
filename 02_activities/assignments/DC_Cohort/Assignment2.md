@@ -54,7 +54,9 @@ The store wants to keep customer addresses. Propose two architectures for the CU
 **HINT:** search type 1 vs type 2 slowly changing dimensions. 
 
 ```
-Your answer...
+Customers can move, sometimes necessitating address record changes over time. Therefore, it is necessary to decide whether to overwrite the address record with the new data information (Type 1 SCD) or to preserve the former address(es) and update the existing record with the new data information. (Type 2 SCD).  It is necessary to add a column to record the date the record was initialized or updated (i.e,., customer_entry_date) and the date the record became obsolete (I.e., customer_end_date). A TRUE/FALSE boolean indicator shows whether the record is a current bookstore customer (TRUE) or former bookstore customer(FALSE). For Type 2 SCD, each update generates an additional customer address record. 
+Reference: https://www.sqlshack.com/implementing-slowly-changing-dimensions-scds-in-data-warehouses/
+
 ```
 
 ***
@@ -183,5 +185,5 @@ Consider, for example, concepts of labour, bias, LLM proliferation, moderating c
 
 
 ```
-Your thoughts...
+A primary ethical issue identified in this story is that the data sets used to train machine learning are subjective entities created and assembled by a collection of individuals.: data sets are no more objective than the human reasoning and motives used to inform them. And that's the crux. Machine learning modelling relies on human input, reflecting an incomplete and flawed understanding of what is presented as an objective and accurate depiction of what is being modelled. Complexity abounds and increases at the intersection of technology and society, especially as people construct more complex models across domains, whether visual representations of physical items or linguistic categorizations of human communication. As complexity increases and people compete to improve the datasets used to train machine learning models, the subjective elements central to machine learning modelling can go underrecognized —or, worse, ignored —leading to problematic content. Article author Vicki Boykis illustrates this ethical issue by describing the mislabeling of "the person subtree of ImageNet," where, in 2019, most of the dataset was disabled to remedy offensive image labelling. In short, data set creation for machine learning shows that, ethically, the reach of academic work (and corporate interests) can exceed its grasp of knowledge mobilization for the betterment of technology and society.
 ```
